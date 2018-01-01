@@ -25,10 +25,9 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 .navBar {
   height: 10vh;
   width: 100%;
-  font-size: 25px;
+  font-size: 30px;
   background: wheat;
-  position: absolute;
-  bottom: -70px;  
+  color: black; 
 }
 
 links{

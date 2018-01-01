@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Bootstrap from 'react-bootstrap';
 import {BrowserRouter, Route, Link} from 'react-router-dom';
 import axios from 'axios'
-import Background from './oneSparkler.jpg'
+import Background from './discoBall.jpg'
 import randnum from 'random-number-between'
 
 
@@ -11,7 +11,7 @@ import randnum from 'random-number-between'
 
 
 
-class News extends Component {
+class Entertainment extends Component {
     constructor() {
         super();
         this.state = {
@@ -23,7 +23,7 @@ class News extends Component {
     componentDidMount() {
         axios({
             method:'get',
-            url: 'https://newsapi.org/v2/top-headlines?sources=the-next-web,the-verge,bbc-news,abc-news,cnn&apiKey=' + key,
+            url: 'https://newsapi.org/v2/top-headlines?sources=mtv-news,buzzfeed,entertainment-weekly&apiKey=' + key,
             
         }).then(({data}) => {
             var title =[];
@@ -50,6 +50,7 @@ class News extends Component {
                 
                 <h1 className='text' style={textStyle}>{this.state.news}</h1>
                 
+                
             </div>
             
             
@@ -75,4 +76,4 @@ const textStyle = {
     borderRadius: '3px'
 }
 
-export default News;
+export default Entertainment;

@@ -56,7 +56,7 @@ const textStyle = {
     color:'white', 
     background: 'Indigo',
     position:'absolute', 
-    bottom:'-700px',
+    top:'400px',
     textAlign: 'center',
     width: '45vw',
     marginLeft: '30%',

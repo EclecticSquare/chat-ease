@@ -15,17 +15,7 @@ class Intro extends Component {
             <div className='intro'>
                <img src={ Background } className='introImage' />
                <h1 className='title h1-responsive'>Chat-Ease</h1>
-               <h3 className="text-muted">"Being the Light of the Party <br/>is a Br-ease with Chat-Ease"</h3>
-               
-                {/* <Button waves='light'className='indigo darken-4 btn-large'><Link to="/chat"> Chat </Link><Icon right>chat_bubble</Icon></Button>  */}
-                
-            
-        
-                  
-                
-               
-               
-               
+               <h3 className="text-muted">"Being the Light of the Party <br/>is a Br-ease with Chat-Ease"</h3>               
             </div>
 
         )
