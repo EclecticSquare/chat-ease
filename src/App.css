@@ -1,0 +1,49 @@
+
+.introImage {
+  width: 100%;
+}
+
+.title {
+position: absolute;
+font-size: 100px;
+top: 150px;
+left: 25px;
+color: rgb(216, 214, 158);
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+} 
+
+.text-muted {
+position: absolute;
+top: 270px;
+left: 18px;
+font-size: 30px;
+color: rgb(216, 214, 158);
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+.navBar {
+  height: 10vh;
+  width: 100%;
+  font-size: 25px;
+  background: wheat;
+  position: absolute;
+  bottom: -70px;  
+}
+
+links{
+  padding: 20px;
+}
+
+.navbar a{
+  color: white;
+  margin: 5px;
+}
+
+.navbar a:hover {
+  color: orange;
+}
+
+.navbar a:active {
+  color: red;
+}

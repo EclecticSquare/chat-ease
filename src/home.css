@@ -1,0 +1,28 @@
+ .introImage {
+    width: 100%;
+}
+
+.title {
+  position: absolute;
+  font-size: 100px;
+  top: 150px;
+  left: 25px;
+  color: rgb(216, 214, 158);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+} 
+
+.text-muted {
+  position: absolute;
+  top: 270px;
+  left: 18px;
+  font-size: 30px;
+  color: rgb(216, 214, 158);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+Button {
+  position: absolute;
+  top: -750px;
+  left: -675px;
+  background-color:  rgb(216, 214, 158);
+}
