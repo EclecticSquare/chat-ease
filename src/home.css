@@ -5,24 +5,50 @@
 .title {
   position: absolute;
   font-size: 100px;
-  top: 150px;
+  top: 250px;
   left: 25px;
   color: rgb(216, 214, 158);
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
 } 
+
+.icon {
+  position: absolute;
+  color: red;
+  top: 50vh;
+  right: 90vw;
+  height: 90px;
+}
 
 .text-muted {
   position: absolute;
-  top: 270px;
-  left: 18px;
+  top: 355px;
+  left: 60px;
   font-size: 30px;
   color: rgb(216, 214, 158);
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+  text-align: center
 }
 
-Button {
+div.intro button.btn.btn-danger.btn-lg {
+  width: 20vw;
   position: absolute;
-  top: -750px;
-  left: -675px;
-  background-color:  rgb(216, 214, 158);
+  right: 63vw;
+  
 }
+
+.buttonDropdown {
+  width: 35vh;
+  height: 50px;
+  
+ 
+}
+
+button.buttonDropdown.dropdown-toggle.btn.btn-secondary {
+  font-size: 30px;
+  font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+  background-color: lightgray;
+  position: absolute;
+  color: black;
+  right: 78vw;
+}
+

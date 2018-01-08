@@ -1,0 +1,32 @@
+.text {
+    color:white; 
+    background: black;
+    position:absolute; 
+    top:400px;
+    text-align: center;
+    width: 45vw;
+    margin-left: 30%;
+    font-size: 50px;
+}
+
+
+ul.vertNav.nav.flex-column.nav-tabs {   
+    width: 20vw;
+    position: absolute;
+    top: 5vh; 
+  }
+
+  .navLinkStyle {
+    font-size: 25px;
+    color: lightgray;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+    list-style: none !important;
+    cursor: pointer;
+  }
+
+  .navLinkStyle:hover {
+    color: lightgoldenrodyellow;
+    font-size: 35px;
+    list-style: none;
+  }

@@ -4,7 +4,8 @@ import {BrowserRouter, Route, Link} from 'react-router-dom';
 import axios from 'axios'
 import Background from './oneSparkler.jpg'
 import randnum from 'random-number-between'
-
+import { Nav, NavItem, Dropdown, DropdownItem, DropdownToggle, DropdownMenu, NavLink } from 'reactstrap';
+import './news.css'
 
 
 
@@ -14,6 +15,9 @@ import randnum from 'random-number-between'
 class News extends Component {
     constructor() {
         super();
+
+        this.toggle = this.toggle.bind(this);
+        
         this.state = {
              news: [],
         }
@@ -39,7 +43,11 @@ class News extends Component {
         
     }
 
-
+    toggle() {
+        this.setState({
+          dropdownOpen: !this.state.dropdownOpen
+        });
+      }
 
 
 
@@ -50,6 +58,20 @@ class News extends Component {
                 
                 <h1 className='text' style={textStyle}>{this.state.news}</h1>
                 
+                <Nav tabs vertical className='vertNav'>
+                    <NavItem>
+                        <NavLink href="#"><Link to='/home' className='navLinkStyle3'>Home</Link></NavLink>
+                    </NavItem>
+                    <NavItem>
+                        <NavLink href="#"><Link to="/cats" className='navLinkStyle3'>Cats</Link></NavLink>
+                    </NavItem>
+                    <NavItem>
+                        <NavLink href="#"><Link to="/entertainment" className='navLinkStyle3'>Entertainment</Link></NavLink>
+                    </NavItem>
+                    <NavItem>
+                        <NavLink href="#"><Link to="/chuck"  className='navLinkStyle3'>Chuck Norris </Link></NavLink>
+                    </NavItem>
+                </Nav>
             </div>
             
             
@@ -64,8 +86,8 @@ var rand = randnum(1, 20, 1);
 console.log(rand);
 
 const textStyle = {
-    color:'white', 
-    background: 'Indigo',
+    color:'white',
+    background: 'tan',
     position:'absolute', 
     top:'400px',
     textAlign: 'center',

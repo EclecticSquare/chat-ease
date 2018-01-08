@@ -4,6 +4,9 @@ import {BrowserRouter, Route, Link} from 'react-router-dom';
 import axios from 'axios'
 import Background from './discoBall.jpg'
 import randnum from 'random-number-between'
+import { Nav, NavItem, Dropdown, DropdownItem, DropdownToggle, DropdownMenu, NavLink } from 'reactstrap';
+import './entertainment.css'
+
 
 
 
@@ -14,11 +17,20 @@ import randnum from 'random-number-between'
 class Entertainment extends Component {
     constructor() {
         super();
+
+        this.toggle = this.toggle.bind(this);
+        
         this.state = {
              news: [],
+             dropdownOpen: false
         }
     }
    
+    toggle() {
+        this.setState({
+          dropdownOpen: !this.state.dropdownOpen
+        });
+      }
 
     componentDidMount() {
         axios({
@@ -49,7 +61,21 @@ class Entertainment extends Component {
                 <img src={ Background } className='introImage' />
                 
                 <h1 className='text' style={textStyle}>{this.state.news}</h1>
-                
+            
+                <Nav tabs vertical className='vertNav'>
+                    <NavItem>
+                        <NavLink href="#"><Link to='/home' className='navLinkStyle2'>Home</Link></NavLink>
+                    </NavItem>
+                    <NavItem>
+                        <NavLink href="#"><Link to="/cats" className='navLinkStyle2'>Cats</Link></NavLink>
+                    </NavItem>
+                    <NavItem>
+                        <NavLink href="#"><Link to="/news"  className='navLinkStyle2'>News</Link></NavLink>
+                    </NavItem>
+                    <NavItem>
+                        <NavLink href="#"><Link to="/chuck"  className='navLinkStyle2'>Chuck Norris </Link></NavLink>
+                    </NavItem>
+                </Nav>
                 
             </div>
             
@@ -66,7 +92,7 @@ console.log(rand);
 
 const textStyle = {
     color:'white', 
-    background: 'Indigo',
+    background: 'silver',
     position:'absolute', 
     top:'400px',
     textAlign: 'center',

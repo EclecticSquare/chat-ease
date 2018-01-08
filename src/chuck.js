@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import Bootstrap from 'react-bootstrap';
 import {BrowserRouter, Route, Link} from 'react-router-dom';
 import axios from 'axios'
 import Background from './partyLights.jpg'
+import { Nav, NavItem, Dropdown, DropdownItem, DropdownToggle, DropdownMenu, NavLink } from 'reactstrap';
+import './chuck.css'
 
 
 
@@ -13,10 +14,20 @@ import Background from './partyLights.jpg'
 class Chuck extends Component {
     constructor() {
         super();
+
+        this.toggle = this.toggle.bind(this);
         this.state = {
              chuck: [],
+             dropdownOpen: false
+             
         }
     }
+
+    toggle() {
+        this.setState({
+          dropdownOpen: !this.state.dropdownOpen
+        });
+      }
 
     componentDidMount() {
         axios({
@@ -42,8 +53,46 @@ class Chuck extends Component {
             <div className='backgroundImage'>
                 <img src={ Background } className='introImage' />
                 
-                <h1 className='text' style={textStyle}>{this.state.chuck}</h1>
+                <h1 className='text'>{this.state.chuck}</h1>
+
+                <Nav tabs vertical className='vertNav'>
+                    <NavItem>
+                        <NavLink href="#"><Link to='/home' className='navLinkStyle'>Home</Link></NavLink>
+                    </NavItem>
+                    <NavItem>
+                        <NavLink href="#"><Link to="/cats" className='navLinkStyle'>Cats</Link></NavLink>
+                    </NavItem>
+                    <NavItem>
+                        <NavLink href="#"><Link to="/news"  className='navLinkStyle'>News</Link></NavLink>
+                    </NavItem>
+                    <NavItem>
+                        <NavLink href="#"><Link to="/entertainment" className='navLinkStyle'>Entertainment</Link></NavLink>
+                    </NavItem>
+                </Nav>
                 
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                {/* <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle} >
+                        <DropdownToggle caret className='buttonDropdown chuckDrop'>
+                        Let's Chat!
+                        </DropdownToggle>
+                        <DropdownMenu>
+                            <DropdownItem><Link to='/home' className='linkStyle'>Home</Link></DropdownItem>
+                            <DropdownItem><Link to="/cats" className='linkStyle'>Cats </Link></DropdownItem>
+                            <DropdownItem><Link to="/chuck"  className='linkStyle'>Chuck Norris </Link></DropdownItem>
+                            <DropdownItem><Link to="/news"  className='linkStyle'>News</Link></DropdownItem>
+                            <DropdownItem><Link to="/entertainment" className='linkStyle'>Entertainment</Link></DropdownItem>
+                        </DropdownMenu>
+                    </ButtonDropdown> */}
                 
             </div>
             
@@ -53,16 +102,5 @@ class Chuck extends Component {
     }
 }
 
-const textStyle = {
-    color:'white', 
-    background: 'Indigo',
-    position:'absolute', 
-    top:'400px',
-    textAlign: 'center',
-    width: '45vw',
-    marginLeft: '30%',
-    fontSize: '50px',
-    borderRadius: '3px'
-}
 
 export default Chuck;

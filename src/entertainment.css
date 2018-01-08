@@ -1,0 +1,20 @@
+ul.vertNav.nav.flex-column.nav-tabs {   
+    width: 20vw;
+    position: absolute;
+    top: 5vh; 
+  }
+
+  .navLinkStyle2 {
+    font-size: 25px;
+    color: lightgray;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+    list-style: none !important;
+    cursor: pointer;
+  }
+
+  .navLinkStyle2:hover {
+    color: white;
+    font-size: 35px;
+    list-style: none;
+  }

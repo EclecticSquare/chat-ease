@@ -3,6 +3,8 @@ import Bootstrap from 'react-bootstrap';
 import {BrowserRouter, Route, Link} from 'react-router-dom';
 import axios from 'axios'
 import Background from './partyConfet.jpg'
+import { Nav, NavItem, Dropdown, DropdownItem, DropdownToggle, DropdownMenu, NavLink } from 'reactstrap';
+import './cats.css'
 
 
 
@@ -13,15 +15,24 @@ import Background from './partyConfet.jpg'
 class Cats extends Component {
     constructor() {
         super();
+
+        this.toggle = this.toggle.bind(this);
         this.state = {
              cat: [],
+             dropdownOpen: false
         }
     }
+
+    toggle() {
+        this.setState({
+          dropdownOpen: !this.state.dropdownOpen
+        });
+      }
 
     componentDidMount() {
         axios({
             method:'get',
-            url: 'https://catfact.ninja/fact',
+            url: 'https://catfact.ninja/fact?max_length=150',
             
         }).then(({data}) => {
             var catFact =[];
@@ -44,6 +55,20 @@ class Cats extends Component {
                 
                 <h1 className='text' style={textStyle}>{this.state.cat}</h1>
                 
+                <Nav tabs vertical className='vertNav'>
+                    <NavItem>
+                        <NavLink href="#"><Link to='/home' className='navLinkStyle1'>Home</Link></NavLink>
+                    </NavItem>
+                    <NavItem>
+                        <NavLink href="#"><Link to="/chuck"  className='navLinkStyle1'>Chuck Norris </Link></NavLink>
+                    </NavItem>
+                    <NavItem>
+                        <NavLink href="#"><Link to="/news"  className='navLinkStyle1'>News</Link></NavLink>
+                    </NavItem>
+                    <NavItem>
+                        <NavLink href="#"><Link to="/entertainment" className='navLinkStyle1'>Entertainment</Link></NavLink>
+                    </NavItem>
+                </Nav>
             </div>
             
             
@@ -54,7 +79,7 @@ class Cats extends Component {
 
 const textStyle = {
     color:'white', 
-    background: 'Indigo',
+    background: 'darkslateblue',
     position:'absolute', 
     top:'400px',
     textAlign: 'center',
