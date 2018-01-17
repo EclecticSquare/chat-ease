@@ -1,5 +1,7 @@
- .introImage {
-    width: 100%;
+ .intro {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('./candlesSparklers.jpg');
 }
 
 .title {
@@ -11,13 +13,6 @@
   font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
 } 
 
-.icon {
-  position: absolute;
-  color: red;
-  top: 50vh;
-  right: 90vw;
-  height: 90px;
-}
 
 .text-muted {
   position: absolute;
@@ -29,26 +24,14 @@
   text-align: center
 }
 
-div.intro button.btn.btn-danger.btn-lg {
-  width: 20vw;
-  position: absolute;
-  right: 63vw;
-  
-}
 
 .buttonDropdown {
-  width: 35vh;
-  height: 50px;
-  
- 
+  position: absolute;
+  top: 60vh;
 }
 
-button.buttonDropdown.dropdown-toggle.btn.btn-secondary {
-  font-size: 30px;
-  font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
-  background-color: lightgray;
-  position: absolute;
-  color: black;
-  right: 78vw;
-}
+
+
+
+
 
