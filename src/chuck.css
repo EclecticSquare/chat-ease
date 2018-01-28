@@ -1,32 +1,31 @@
-.text {
-    color:white; 
-    background: black;
+.textChuck {
+    color: wheat; 
     position:absolute; 
-    top:400px;
-    text-align: center;
-    width: 45vw;
-    margin-left: 30%;
-    font-size: 50px;
+    top:10vh;
+    right: 100px;
+    text-align: justify;
+    width: 40vw;
+    font-size: 40px;
 }
 
+div.backgroundImage {
+  background: url('westernBackground.jpg');
+  background-repeat: none;
+  background-size: cover;
+}
 
-ul.vertNav.nav.flex-column.nav-tabs {   
-    width: 20vw;
-    position: absolute;
-    top: 5vh; 
+  .introImage1 {
+    position: relative;
+    height: 65vh;
+    width: 90vw;
+    right: -500px;
+    top: -130px;
+
   }
 
-  .navLinkStyle {
-    font-size: 25px;
-    color: lightgray;
-    font-weight: bold;
-    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
-    list-style: none !important;
-    cursor: pointer;
-  }
-
-  .navLinkStyle:hover {
-    color: lightgoldenrodyellow;
-    font-size: 35px;
-    list-style: none;
+  .introImage2 {
+    height: 65vh;
+    width: 55vw;
+    position: relative;
+    bottom: 220px;
   }

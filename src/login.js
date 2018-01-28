@@ -8,7 +8,9 @@ import Entertainment from './entertainment.js'
 import './login.css';
 import Background from './candlesSparklers.jpg';
 import {Route, Link} from 'react-router-dom';
-import Google from './googleLogin.js'
+import Google from './googleLogin'
+
+// import GoogleSignIn from "react-google-signin";
 
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
@@ -28,6 +30,14 @@ class Login extends Component {
         modal: !this.state.modal
       });
     }
+
+    onSignIn(userProfile, accessToken) {
+      console.log(userProfile)
+  }
+  
+    signOut() {
+      this.googleAuth.signOut();
+  }
   
     render() {
       return (
@@ -40,8 +50,7 @@ class Login extends Component {
                 <br/>
             </ModalBody>
             <ModalFooter>
-                <Google/>
-              <Button color="primary" onClick={this.toggle}></Button>
+              <Google/>
               <Button color="secondary" onClick={this.toggle}>Cancel</Button>
             </ModalFooter>
           </Modal>

@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import Bootstrap from 'react-bootstrap';
 import {BrowserRouter, Route, Link} from 'react-router-dom';
 import axios from 'axios'
-import Background from './partyConfet.jpg'
+import Background from './catOnBlack.jpg'
 import { Nav, NavItem, Dropdown, DropdownItem, DropdownToggle, DropdownMenu, NavLink } from 'reactstrap';
 import './cats.css'
-
+import Menu from './menu.js'
 
 
 
@@ -32,10 +32,11 @@ class Cats extends Component {
     componentDidMount() {
         axios({
             method:'get',
-            url: 'https://catfact.ninja/fact?max_length=150',
+            url: 'https://catfact.ninja/fact?max_length=200',
             
         }).then(({data}) => {
             var catFact =[];
+            console.log(data.fact)
             catFact.push(data.fact)
             console.log(catFact)
             this.setState({cat: catFact})
@@ -53,22 +54,9 @@ class Cats extends Component {
             <div className='backgroundImage'>
                 <img src={ Background } className='introImage' />
                 
-                <h1 className='text' style={textStyle}>{this.state.cat}</h1>
+                <h1 className='textCat'>{this.state.cat}</h1>
                 
-                <Nav tabs vertical className='vertNav'>
-                    <NavItem>
-                        <NavLink href="#"><Link to='/home' className='navLinkStyle1'>Home</Link></NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink href="#"><Link to="/chuck"  className='navLinkStyle1'>Chuck Norris </Link></NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink href="#"><Link to="/news"  className='navLinkStyle1'>News</Link></NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink href="#"><Link to="/entertainment" className='navLinkStyle1'>Entertainment</Link></NavLink>
-                    </NavItem>
-                </Nav>
+                <Menu />
             </div>
             
             
@@ -77,16 +65,6 @@ class Cats extends Component {
     }
 }
 
-const textStyle = {
-    color:'white', 
-    background: 'darkslateblue',
-    position:'absolute', 
-    top:'400px',
-    textAlign: 'center',
-    width: '45vw',
-    marginLeft: '30%',
-    fontSize: '50px',
-    borderRadius: '3px'
-}
+
 
 export default Cats;

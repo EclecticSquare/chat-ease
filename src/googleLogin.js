@@ -1,27 +1,26 @@
-import GoogleSignIn from 'react-google-signin';
+
 import React, { Component } from 'react';
+import GoogleLogin from 'react-google-login';
 
 
 class Google extends Component { 
     
-    
-        onSignIn(userProfile, accessToken) {
-            console.log(userProfile)
-        }
+//    const responseGoogle = (response) => {
+//         console.log(response);
+//       }
         
-        signOut() {
-            this.googleAuth.signOut();
-        }
     
         render() {
             return (
                 <div>
-                    <GoogleSignIn clientId='247487919544-lhq3c050e9uknrjcbm6532kh9m4v32kv.apps.googleusercontent.com'
-                            ref={g => this.googleAuth = g}
-                            onSuccess={this.onSignIn.bind(this)}
+                    <GoogleLogin
+                        clientId="247487919544-lhq3c050e9uknrjcbm6532kh9m4v32kv.apps.googleusercontent.com"
+                        buttonText="Login with Google"
+                        // onSuccess={responseGoogle}
+                        // onFailure={responseGoogle}
                     />
                     
-                    <button onClick={this.signOut.bind(this)}> Sign Out </button>  
+                    {/* <button onClick={this.signOut.bind(this)}> Sign Out </button>   */}
                 </div>
             );    
         }

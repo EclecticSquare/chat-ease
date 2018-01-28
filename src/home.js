@@ -7,7 +7,6 @@ import News from './news.js'
 import Login from './login.js'
 import Directions from './directions.js'
 import Entertainment from './entertainment.js'
-import Chatroom from './chatroom.js'
 import './home.css';
 import Background from './candlesSparklers.jpg';
 import {Route, Link} from 'react-router-dom';
@@ -57,7 +56,6 @@ class Intro extends Component {
                         <DropdownItem><Link to="/chuck"  className='linkStyle'>Chuck Norris </Link></DropdownItem>
                         <DropdownItem><Link to="/news"  className='linkStyle'>News</Link></DropdownItem>
                         <DropdownItem><Link to="/entertainment" className='linkStyle'>Entertainment</Link></DropdownItem>
-                        <DropdownItem><Link to="/chatroom" className='linkStyle'>Continue</Link></DropdownItem>
                     </DropdownMenu>
                 </ButtonDropdown>
                 <Login/>

@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import Bootstrap from 'react-bootstrap';
 import {BrowserRouter, Route, Link} from 'react-router-dom';
 import axios from 'axios'
-import Background from './oneSparkler.jpg'
+import Background from './news.jpg'
 import randnum from 'random-number-between'
 import { Nav, NavItem, Dropdown, DropdownItem, DropdownToggle, DropdownMenu, NavLink } from 'reactstrap';
 import './news.css'
+import Menu from './menu.js'
 
 
 
@@ -19,7 +20,8 @@ class News extends Component {
         this.toggle = this.toggle.bind(this);
         
         this.state = {
-             news: [],
+             newsTitle: [],
+             newsSummary: []
         }
     }
    
@@ -34,11 +36,10 @@ class News extends Component {
             var description =[];
             title.push(data.articles[rand].title)
             description.push(data.articles[rand].description)
-            var finalInfo = 'Title: \n' + title + ' \n Summary: '  + description
-
-            console.log(finalInfo)
-            this.setState({news: finalInfo})
-            console.log(this.state.news)
+        
+            this.setState({newsTitle: title, newsSummary: description})
+            console.log(this.state.newsTitle)
+            console.log(this.state.newsSummary)
          });
         
     }
@@ -56,22 +57,11 @@ class News extends Component {
             <div className='backgroundImage'>
                 <img src={ Background } className='introImage' />
                 
-                <h1 className='text' style={textStyle}>{this.state.news}</h1>
+                <h1 className='textNews'>{this.state.newsTitle}</h1>
+                    <h3 className='textNews'>{this.state.newsSummary}</h3>
+
                 
-                <Nav tabs vertical className='vertNav'>
-                    <NavItem>
-                        <NavLink href="#"><Link to='/home' className='navLinkStyle3'>Home</Link></NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink href="#"><Link to="/cats" className='navLinkStyle3'>Cats</Link></NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink href="#"><Link to="/entertainment" className='navLinkStyle3'>Entertainment</Link></NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink href="#"><Link to="/chuck"  className='navLinkStyle3'>Chuck Norris </Link></NavLink>
-                    </NavItem>
-                </Nav>
+                <Menu />
             </div>
             
             
@@ -85,16 +75,6 @@ const key = 'ba3db1d153d84fe385b66276373849c3';
 var rand = randnum(1, 20, 1);
 console.log(rand);
 
-const textStyle = {
-    color:'white',
-    background: 'tan',
-    position:'absolute', 
-    top:'400px',
-    textAlign: 'center',
-    width: '60vw',
-    marginLeft: '25%',
-    fontSize: '40px',
-    borderRadius: '3px'
-}
+
 
 export default News;

@@ -5,8 +5,9 @@ import Intro from './home.js'
 import Cats from './cats.js'
 import Chuck from './chuck.js'
 import News from './news.js'
+import Chat from './chatroom.js'
 import Entertainment from './entertainment.js'
-import Chatroom from './chatroom.js'
+
 
 
 
@@ -23,7 +24,7 @@ class App extends Component {
             <Route path="/chuck" component={Chuck}/> 
             <Route path="/news" component={News}/> 
             <Route path="/entertainment" component={Entertainment}/> 
-            <Route path="/chatroom" component={Chatroom}/>
+            <Route path="/chat" component={Chat}/> 
            
 
 

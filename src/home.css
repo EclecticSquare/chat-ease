@@ -27,11 +27,18 @@
 
 .buttonDropdown {
   position: absolute;
-  top: 60vh;
+  top: 56vh;
+  left: 4vw;
+  height: 50px;
 }
 
-
-
+button.dropdown-toggle.btn.btn-secondary {
+  width: 302px;
+  background-color: #000000;
+  font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+  font-size: 30px;
+  color: #878E95;
+}
 
 
 

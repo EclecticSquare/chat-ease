@@ -1,84 +1,87 @@
-import React, { Component } from 'react';
-import {Input, InputGroup, InputGroupAddon, Button} from 'reactstrap' 
-import {Route, Link} from 'react-router-dom';
-import io from 'socket.io-client'
+
+import React from "react";
+import io from "socket.io-client";
+import {Button} from 'react-bootstrap';
+import Menu from './menu.js'
 import './chatroom.css'
 
+class Chat extends React.Component{
+    constructor(props){
+        super(props);
 
+        const convoStarters = [ 'What is something you are obsessed with?',
+        'What is something that is popular now that annoys you?',
+        'If you had intro music, what song would it be? Why?',
+        'What’s the most useful thing you own?']
 
+        this.state = {
+            username: '',
+            message: '',
+            messages: []
+        };
 
-class Chatroom extends Component {
-    constructor(){
-        super();
-            this.state = {value: '',
-                          list: []};
-            
-            this.handleChange=this.handleChange.bind(this);
-            this.handleSubmit=this.handleSubmit.bind(this)
+        this.socket = io('localhost:8080');
 
+        this.socket.on('RECEIVE_MESSAGE', data => {
+            console.log(data);
+            this.setState({messages: [...this.state.messages, data]});
+            console.log(this.state.messages);
+        })
 
-        this.socket = io();
-        this.socket.on('connect', function(socket){
-            alert('it worked')
-            console.log('a user connected')
+        this.sendMessage = ev => {
+            ev.preventDefault();
+            this.socket.emit('SEND_MESSAGE', {
+                author: this.state.username,
+                message: this.state.message
             })
-
-        this.socket.on('chat message',function(){
-
-        })
-
-        this.socket.on('disconnect', function(){
-            console.log('user disconnected')
-        })
-            
-    }
-    handleChange(event) {
-        event.preventDefault();
-        this.setState({value: event.target.value});
+            this.setState({message: ''});
+            }
         
+           
+    
+        }
+    
+       question = (arr, index) => {
+           console.log(convoStarters)
+       }
 
-        // let newValue = event.target.value
-        // this.state.list.push(newValue);
-        
-        console.log(this.state.value)
-        // console.log(this.state.list)
+    render(){
+        return (
+            <div>
+                <h1 className='display-4'>Keep the Conversation Going</h1>
+                    <h3></h3>
+                <div className="container">
+                            <div className="card">
+                                <div className="card-body">
+                                    <div className="card-title">Global Chat</div>
+                                    <hr/>
+                                    <div className="messages">
+                                        {this.state.messages.map(message => {
+                                            return (
+                                                <div>{message.author}: {message.message}</div>
+                                            )
+                                        })}
+                                    </div>
+
+                                </div>
+                                <div className="card-footer">
+                                    <input type="text" placeholder="Username" value={this.state.username} onChange={ev => this.setState({username: ev.target.value})} className="form-control input-lg"/>
+                                    <br/>
+                                    <input type="text" placeholder="Message" className="form-control" value={this.state.message} onChange={ev => this.setState({message: ev.target.value})}/>
+                                    <br/>
+                                    <Button onClick={this.sendMessage} className="btn btn-secondary form-control">Send</Button>
+                                </div>
+                            </div>
+                            <Menu/>
+                        </div>
+                    </div>
+              
+        );
     }
 
-    handleSubmit(event){
-        event.preventDefault();
-        this.setState({value: event.target.value})
-    }
+    
+    
 
-    send() {
-        this.socket.emit('chat message',this.state.value)
-        return <li>{this.state.value}</li>
-        
-    }
-
-
-
-
-
-    render() {
-        let listJSX = this.state.list.map((msg,index) => {
-            
-        })
-
-
-        return(
-            <div className='chatHolder'>
-                <div className='currentConvo'></div>
-                
-                <InputGroup className='inputSection'>
-                    <Input  onSubmit={this.handleSubmit} onChange={this.handleChange}/>
-                    <InputGroupAddon><Button onClick={this.send.bind(this)} color='info' className='sendButton'>Send</Button></InputGroupAddon>
-                    
-                </InputGroup>
-            
-                {/* <div>{this.state.value}</div> */}
-            </div>
-        )
-    }
 }
 
-export default Chatroom;
+export default Chat;

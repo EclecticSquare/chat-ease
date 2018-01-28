@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import {BrowserRouter, Route, Link} from 'react-router-dom';
 import axios from 'axios'
-import Background from './partyLights.jpg'
+import Background from './thoughtBubble.png'
+import Background2 from './chuck1.png'
 import { Nav, NavItem, Dropdown, DropdownItem, DropdownToggle, DropdownMenu, NavLink } from 'reactstrap';
 import './chuck.css'
+import Menu from './menu.js'
 
 
 
@@ -51,49 +53,12 @@ class Chuck extends Component {
     render() {
         return(
             <div className='backgroundImage'>
-                <img src={ Background } className='introImage' />
-                
-                <h1 className='text'>{this.state.chuck}</h1>
+                <img src={ Background } className='introImage1' />
+                <img src={ Background2 } className='introImage2' />
+                <h1 className='textChuck'>{this.state.chuck}</h1>
 
-                <Nav tabs vertical className='vertNav'>
-                    <NavItem>
-                        <NavLink href="#"><Link to='/home' className='navLinkStyle'>Home</Link></NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink href="#"><Link to="/cats" className='navLinkStyle'>Cats</Link></NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink href="#"><Link to="/news"  className='navLinkStyle'>News</Link></NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink href="#"><Link to="/entertainment" className='navLinkStyle'>Entertainment</Link></NavLink>
-                    </NavItem>
-                </Nav>
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                {/* <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle} >
-                        <DropdownToggle caret className='buttonDropdown chuckDrop'>
-                        Let's Chat!
-                        </DropdownToggle>
-                        <DropdownMenu>
-                            <DropdownItem><Link to='/home' className='linkStyle'>Home</Link></DropdownItem>
-                            <DropdownItem><Link to="/cats" className='linkStyle'>Cats </Link></DropdownItem>
-                            <DropdownItem><Link to="/chuck"  className='linkStyle'>Chuck Norris </Link></DropdownItem>
-                            <DropdownItem><Link to="/news"  className='linkStyle'>News</Link></DropdownItem>
-                            <DropdownItem><Link to="/entertainment" className='linkStyle'>Entertainment</Link></DropdownItem>
-                        </DropdownMenu>
-                    </ButtonDropdown> */}
-                
+                <Menu />
+                   
             </div>
             
             

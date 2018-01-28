@@ -1,20 +1,18 @@
-ul.vertNav.nav.flex-column.nav-tabs {   
-    width: 20vw;
+h1.textEnt {
+    font-size: 50px;
+    font-weight: bolder;   
+    width: 90vw;
     position: absolute;
-    top: 5vh; 
+    bottom: 12vh;
+    left: 5vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+    opacity: 0.6;
   }
 
-  .navLinkStyle2 {
-    font-size: 25px;
-    color: lightgray;
-    font-weight: bold;
-    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
-    list-style: none !important;
-    cursor: pointer;
+  .introImage {
+   height: 100vh;
+   
   }
 
-  .navLinkStyle2:hover {
-    color: white;
-    font-size: 35px;
-    list-style: none;
-  }
+ 

@@ -1,20 +1,23 @@
-ul.vertNav.nav.flex-column.nav-tabs {   
-    width: 20vw;
-    position: absolute;
-    top: 5vh; 
-  }
 
-  .navLinkStyle3 {
-    font-size: 25px;
-    color: lightgoldenrodyellow;
-    font-weight: bold;
-    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
-    list-style: none !important;
-    cursor: pointer;
-  }
 
-  .navLinkStyle3:hover {
-    color: tan;
-    font-size: 35px;
-    list-style: none;
-  }
+h1.textNews  {
+  width: 38vw;
+  color: black;
+  top: 28vh;
+  left: 60px;
+  position: absolute; 
+  font-weight:  bold;
+  font-size: 35px;
+
+}
+
+h3.textNews  {
+  width: 38vw;
+  color: black;
+  top: 37vh;
+  left: 60px;
+  position: absolute;
+  text-align: left;
+  font-size: 25px;
+}
+  

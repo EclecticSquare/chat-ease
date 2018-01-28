@@ -1,18 +1,43 @@
-div.inputSection.input-group {
-    position: absolute;
-    bottom: 5px;
-    left:2.5vw;
-    width: 95vw;
-}
-
-button.sendButton.btn.btn-info {
-    width: 10vw;
-    font-size: 18px;
-}
-
-html {
-    background-image: url('./colorful-speech-bubbles.jpg');
-    background-repeat: no-repeat;
+body {
+    background: url('./gray-brick.jpg') no-repeat;
     background-size: cover;
 }
+h1.display-4 {
+    color: white;
+   position: absolute;
+   margin-top: 20px;
+   left: 8vh;
+}
+div.container {
+   position: absolute;
+   left: 33vw;
+   font-size: 18px;
+   color: #878E95;
+   text-align: center;
+}
 
+.card-title {
+    font-size: 30px;
+    
+}
+
+::placeholder {
+    font-size: 15px;
+}
+
+input {
+    height: 25px;
+    font-size: 100px;
+}
+
+div.card-body {
+    height: 84vh;
+    background-color: rgb(225, 240, 245);
+}
+div.card-footer {
+    background-color:rgb(225, 240, 245);
+}
+input[type="text"]
+{
+    font-size:15px;
+}
