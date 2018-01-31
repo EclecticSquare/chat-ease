@@ -7,6 +7,7 @@ import Chuck from './chuck.js'
 import News from './news.js'
 import Chat from './chatroom.js'
 import Entertainment from './entertainment.js'
+import Login from './login.js'
 
 
 
@@ -24,8 +25,8 @@ class App extends Component {
             <Route path="/chuck" component={Chuck}/> 
             <Route path="/news" component={News}/> 
             <Route path="/entertainment" component={Entertainment}/> 
+            <Route path="/login" component={Login}/> 
             <Route path="/chat" component={Chat}/> 
-           
 
 
       </div>

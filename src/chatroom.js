@@ -2,23 +2,28 @@
 import React from "react";
 import io from "socket.io-client";
 import {Button} from 'react-bootstrap';
+import eachAfterTimer from 'each-after';
 import Menu from './menu.js'
 import './chatroom.css'
+
+const eachAfter = eachAfterTimer()
 
 class Chat extends React.Component{
     constructor(props){
         super(props);
 
-        const convoStarters = [ 'What is something you are obsessed with?',
-        'What is something that is popular now that annoys you?',
-        'If you had intro music, what song would it be? Why?',
-        'What’s the most useful thing you own?']
+        
 
         this.state = {
             username: '',
             message: '',
-            messages: []
+            messages: [],
+            icebreakers: [] 
         };
+
+        
+
+       
 
         this.socket = io('localhost:8080');
 
@@ -37,28 +42,92 @@ class Chat extends React.Component{
             this.setState({message: ''});
             }
         
+       
            
     
         }
-    
-       question = (arr, index) => {
-           console.log(convoStarters)
-       }
+       componentDidMount(){
+        const onEach = (element, index, processed, interval) => {
+            this.setState({icebreakers: this.state.icebreakers.concat(element)}) 
+        }
+
+        const timeJSX = eachAfter (
+            ['What is something you are obsessed with?',
+            'What is something that is popular now that annoys you?',
+            'If you had intro music, what song would it be? Why?',
+            'What’s the most useful thing you own?',
+            'If you opened a business, what kind of business would it be?',
+            'Have you ever spoke in front of a large group of people? How did it go?',
+            'Who had the biggest impact on the person you have become?',
+            'Where is the most beautiful place you have been?',
+            'Where do you spend most of your free time?',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            ''],
+            6,
+            onEach
+        )
+       
+    }
 
     render(){
+        
+
+       
+
+        //     function (element) {
+        //         console.log(element)
+        //         // return  
+        //         //         <div className='questDiv'>
+        //         //             <h1 className='questions'>{element}</h1><br/>
+        //         //         </div>
+                
+        //     }
+        //   )
+
+
+
         return (
             <div>
                 <h1 className='display-4'>Keep the Conversation Going</h1>
-                    <h3></h3>
+                    <div>{this.state.icebreakers.map((element, index)=> {
+                        return <div key={index} className='question'>{element}</div>
+                    }
+                    )}</div>
                 <div className="container">
                             <div className="card">
                                 <div className="card-body">
                                     <div className="card-title">Global Chat</div>
                                     <hr/>
                                     <div className="messages">
-                                        {this.state.messages.map(message => {
+                                        {this.state.messages.map((message,index) => {
                                             return (
-                                                <div>{message.author}: {message.message}</div>
+                                                <div key={index}>{message.author}: {message.message}</div>
                                             )
                                         })}
                                     </div>

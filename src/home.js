@@ -56,9 +56,10 @@ class Intro extends Component {
                         <DropdownItem><Link to="/chuck"  className='linkStyle'>Chuck Norris </Link></DropdownItem>
                         <DropdownItem><Link to="/news"  className='linkStyle'>News</Link></DropdownItem>
                         <DropdownItem><Link to="/entertainment" className='linkStyle'>Entertainment</Link></DropdownItem>
+                        <DropdownItem><Link to="/chat" className='linkStyle'>Join the Chatroom</Link></DropdownItem>
                     </DropdownMenu>
                 </ButtonDropdown>
-                <Login/>
+                {/* <Login/> */}
                 
                 
      

@@ -12,14 +12,14 @@ import Google from './googleLogin'
 
 // import GoogleSignIn from "react-google-signin";
 
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Label, Input } from 'reactstrap';
 
 
 class Login extends Component {
     constructor(props) {
       super(props);
       this.state = {
-        modal: false
+        modal: true
       };
   
       this.toggle = this.toggle.bind(this);
@@ -42,16 +42,30 @@ class Login extends Component {
     render() {
       return (
         <div>
-          <Button className='loginButton'  outline color="secondary" size='lg' onClick={this.toggle}>{this.props.buttonLabel}Login</Button>
+          <Button className='loginButton'  outline color="secondary" size='lg' onClick={this.toggle}>{this.props.buttonLabel}Login or Create An Account</Button>
           <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
-            <ModalHeader toggle={this.toggle}>Login</ModalHeader>
+            <ModalHeader toggle={this.toggle}>Login or Create An Account</ModalHeader>
             <ModalBody>
                 <img src={Image}/>
                 <br/>
+                <Form>
+                  <FormGroup>
+                    <Label for="exampleEmail">Username</Label>
+                    <Input type="email" name="email" id="exampleName" placeholder="Username" />
+                  </FormGroup>
+                  <FormGroup>
+                    <Label for="examplePassword">Password</Label>
+                    <Input type="password" name="password" id="examplePassword" placeholder="*********" />
+                  </FormGroup>
+                  <FormGroup>
+                    <Label for="examplePassword">Email</Label>
+                    <Input type="password" name="password" id="exampleEmail" placeholder="TalkToMe@ChatEase.com" />
+                  </FormGroup>
+              </Form>
             </ModalBody>
             <ModalFooter>
               <Google/>
-              <Button color="secondary" onClick={this.toggle}>Cancel</Button>
+              <Button color="secondary cancel" onClick={this.toggle}>Cancel</Button>
             </ModalFooter>
           </Modal>
         </div>

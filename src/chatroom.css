@@ -8,9 +8,32 @@ h1.display-4 {
    margin-top: 20px;
    left: 8vh;
 }
+.questDiv {
+    left: 2vw;
+    padding-top: 75px;
+    width: 45vw;
+    
+    
+}
+
+div.question {
+    top: 100px;
+}
+
+.question {
+    font-size: 25px;
+    color: lightgray;
+    padding-top: 45px;
+    margin-left: 20px;
+    animation-name: leaf;
+    animation-duration: 30s;
+    position: absolute;   
+}
+
 div.container {
    position: absolute;
-   left: 33vw;
+   left: 40vw;
+   top: 0px;
    font-size: 18px;
    color: #878E95;
    text-align: center;
@@ -40,4 +63,11 @@ div.card-footer {
 input[type="text"]
 {
     font-size:15px;
+}
+
+@keyframes leaf {
+      0%   {color: lightgray; top: 75px;}
+    25%  {color: lightslategray; top: 250px; font-size: 40px; }
+    50%  {color: white; font-size: 30px;}
+    100% {color: lightslategray; top: 900px; opacity: 0;}
 }

@@ -1,9 +1,9 @@
 .loginButton {
-    width: 302px;
+    width: 45vw;
     height: 50px;
     position: absolute;
-    left: 4vw;
-    bottom: 20vh;
+    left: 30vw;
+    bottom: 45vh;
     
 }
 
@@ -26,4 +26,16 @@ button.btn.btn-primary {
 
 button.btn.btn-secondary {
     font-size: 15px;
+}
+
+.cancel {
+    width: 200px;
+    height: 46px;
+    font-weight: bolder;
+}
+
+button.btn.btn-secondary {
+    font-weight: bolder;
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+    font-size: 18px;
 }
