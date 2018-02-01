@@ -25,23 +25,25 @@ div.question {
     color: lightgray;
     padding-top: 45px;
     margin-left: 20px;
+    position: absolute;
+    opacity: 0;  
     animation-name: leaf;
     animation-duration: 30s;
-    position: absolute;   
+    /* animation: infinite; */
+
+     
 }
 
 div.container {
    position: absolute;
-   left: 40vw;
    top: 0px;
    font-size: 18px;
    color: #878E95;
-   text-align: center;
 }
 
 .card-title {
     font-size: 30px;
-    
+    text-align: center;  
 }
 
 ::placeholder {
@@ -52,7 +54,11 @@ input {
     height: 25px;
     font-size: 100px;
 }
-
+.card {
+    width: 50vw;
+    height: 100vh;
+    left: 49vw;
+}
 div.card-body {
     height: 84vh;
     background-color: rgb(225, 240, 245);
@@ -66,7 +72,7 @@ input[type="text"]
 }
 
 @keyframes leaf {
-      0%   {color: lightgray; top: 75px;}
+      0%   {color: lightgray; top: 75px; opacity: 1;}
     25%  {color: lightslategray; top: 250px; font-size: 40px; }
     50%  {color: white; font-size: 30px;}
     100% {color: lightslategray; top: 900px; opacity: 0;}

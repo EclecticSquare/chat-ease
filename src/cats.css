@@ -8,3 +8,13 @@ h1.textCat {
   left: 5vw;
   font-size: 30px;
 }
+
+button.btn.btn-outline-secondary {
+  width: 250px;
+  height: 50px;
+  position: absolute;
+  bottom: 40vh;
+  left: 30vh;
+  font-size: 25px;
+}
+ 

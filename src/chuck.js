@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {BrowserRouter, Route, Link} from 'react-router-dom';
 import axios from 'axios'
-import Background from './thoughtBubble.png'
+import Background from './white-thought-bubble.png'
 import Background2 from './chuck1.png'
 import { Nav, NavItem, Dropdown, DropdownItem, DropdownToggle, DropdownMenu, NavLink } from 'reactstrap';
 import './chuck.css'

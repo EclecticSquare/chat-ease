@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Bootstrap from 'react-bootstrap';
+import Bootstrap from 'bootstrap';
 import {BrowserRouter, Route, Link} from 'react-router-dom';
 import axios from 'axios'
 import Background from './catOnBlack.jpg'
@@ -30,6 +30,28 @@ class Cats extends Component {
       }
 
     componentDidMount() {
+
+        this.getCats()
+        // axios({
+        //     method:'get',
+        //     url: 'https://catfact.ninja/fact?max_length=200',
+            
+        // }).then(({data}) => {
+        //     var catFact =[];
+        //     console.log(data.fact)
+        //     catFact.push(data.fact)
+        //     console.log(catFact)
+        //     this.setState({cat: catFact})
+        //     console.log(this.state.cat)
+        //  });
+        
+    }
+
+    updateHandler = () => {
+            this.getCats()
+    }
+
+    getCats = () =>     {
         axios({
             method:'get',
             url: 'https://catfact.ninja/fact?max_length=200',
@@ -42,20 +64,15 @@ class Cats extends Component {
             this.setState({cat: catFact})
             console.log(this.state.cat)
          });
-        
     }
-
-
-
-
 
     render() {
         return(
             <div className='backgroundImage'>
                 <img src={ Background } className='introImage' />
-                
+                <button type="button" className="btn btn-outline-info  btn-lg btn-block">Info</button>
                 <h1 className='textCat'>{this.state.cat}</h1>
-                
+                <button type="button" class="btn btn-outline-secondary" onClick={this.updateHandler}>Try Again</button>
                 <Menu />
             </div>
             
