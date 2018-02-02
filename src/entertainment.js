@@ -35,6 +35,21 @@ class Entertainment extends Component {
       }
 
     componentDidMount() {
+        this.getTea()
+        
+    }
+
+    updateHandler = () => {
+        this.getTea()
+            
+     }
+
+    getTea = () => {
+        const key = 'ba3db1d153d84fe385b66276373849c3';
+        
+        var rand = randnum(1, 20, 1);
+        console.log(rand);
+        
         axios({
             method:'get',
             url: 'https://newsapi.org/v2/top-headlines?sources=mtv-news,buzzfeed,entertainment-weekly&apiKey=' + key,
@@ -50,10 +65,7 @@ class Entertainment extends Component {
             this.setState({entTitle: title, entSummary: description })
             
          });
-        
     }
-
-
 
 
 
@@ -61,9 +73,11 @@ class Entertainment extends Component {
         return(
             <div className='backgroundImage'>
                 <img src={ Background } className='introImage' />
+                <div className='cover'></div>
                 <div className="textBackground">
                     <h1 className='textEnt'>{this.state.entTitle}</h1>
                 </div>
+                <button type="button" className="btn btn-outline-danger" onClick={this.updateHandler}>Try Again</button>
                 <Menu />
             </div>
             
@@ -73,10 +87,7 @@ class Entertainment extends Component {
     }
 }
 
-const key = 'ba3db1d153d84fe385b66276373849c3';
 
-var rand = randnum(1, 20, 1);
-console.log(rand);
 
 
 

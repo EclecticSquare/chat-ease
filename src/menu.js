@@ -9,21 +9,21 @@ class Menu extends Component {
         return(
             <div>
                 <input id="toggle" type="checkbox"/>
-                <label className="hamburger" for="toggle">
+                <label className="hamburger" htmlFor="toggle">
                     <div className="top"></div>
                     <div className="meat"></div>
                     <div className="bottom"></div>
                 </label>
 
                 <div className="nav">
-                    <div class="nav-wrapper">
+                    <div className="nav-wrapper">
                         <nav className='innerNav'>
-                        <Link to='/home' ><a className='menuItem' href="#">Home</a></Link>
-                        <Link to='/news' ><a className='menuItem' href="#">News</a></Link>
-                        <Link to='/cats' ><a className='menuItem' href="#">Cats</a></Link>
-                        <Link to='/chuck' ><a className='menuItem' href="#">Chuck Norris</a></Link>
-                        <Link to='/entertainment' ><a className='menuItem' href="#">Entertainment</a></Link>
-                        <Link to='/chat' ><a className='menuItem' href="#">Continue Chatting</a></Link>   
+                        <Link to='/home' className='a' >Home</Link>
+                        <Link to='/news' className='a' >News</Link>
+                        <Link to='/cats' className='a'>Cats</Link>
+                        <Link to='/chuck' className='a'>Chuck Norris</Link>
+                        <Link to='/entertainment' className='a'>Entertainment</Link>
+                        <Link to='/chat' className='a'>Continue Chatting</Link>   
                             
                         </nav>
                     </div>

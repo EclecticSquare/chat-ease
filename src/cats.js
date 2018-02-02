@@ -30,21 +30,7 @@ class Cats extends Component {
       }
 
     componentDidMount() {
-
-        this.getCats()
-        // axios({
-        //     method:'get',
-        //     url: 'https://catfact.ninja/fact?max_length=200',
-            
-        // }).then(({data}) => {
-        //     var catFact =[];
-        //     console.log(data.fact)
-        //     catFact.push(data.fact)
-        //     console.log(catFact)
-        //     this.setState({cat: catFact})
-        //     console.log(this.state.cat)
-        //  });
-        
+        this.getCats()  
     }
 
     updateHandler = () => {
@@ -54,7 +40,7 @@ class Cats extends Component {
     getCats = () =>     {
         axios({
             method:'get',
-            url: 'https://catfact.ninja/fact?max_length=200',
+            url: '/cats',
             
         }).then(({data}) => {
             var catFact =[];
@@ -72,7 +58,7 @@ class Cats extends Component {
                 <img src={ Background } className='introImage' />
                 <button type="button" className="btn btn-outline-info  btn-lg btn-block">Info</button>
                 <h1 className='textCat'>{this.state.cat}</h1>
-                <button type="button" class="btn btn-outline-secondary" onClick={this.updateHandler}>Try Again</button>
+                <button type="button" className="btn btn-outline-secondary" onClick={this.updateHandler}>Try Again</button>
                 <Menu />
             </div>
             

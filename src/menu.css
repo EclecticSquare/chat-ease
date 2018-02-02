@@ -121,12 +121,12 @@
     text-decoration: none;
   }
   
-  nav a.menuItem:first-child {
+  nav a.a:first-child {
     margin-top: 0;
     
   }
 
-  a.menuItem {
+  a.a {
       display: block;
       font-size: 45px;
   }

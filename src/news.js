@@ -27,6 +27,21 @@ class News extends Component {
    
 
     componentDidMount() {
+       this.getNews()
+        
+    }
+
+    updateHandler = () => {
+        this.getNews()
+            
+     }
+
+     getNews = () => {
+        const key = 'ba3db1d153d84fe385b66276373849c3';
+        
+        var rand = randnum(1, 20, 1);
+        console.log(rand);
+
         axios({
             method:'get',
             url: 'https://newsapi.org/v2/top-headlines?sources=the-next-web,the-verge,bbc-news,abc-news,cnn&apiKey=' + key,
@@ -41,8 +56,7 @@ class News extends Component {
             console.log(this.state.newsTitle)
             console.log(this.state.newsSummary)
          });
-        
-    }
+     }
 
     toggle() {
         this.setState({
@@ -59,6 +73,7 @@ class News extends Component {
                 
                 <h1 className='textNews'>{this.state.newsTitle}</h1>
                     <h3 className='textNews'>{this.state.newsSummary}</h3>
+                <button type="button" className="btn btn-outline-primary" onClick={this.updateHandler}>Try Again</button>
 
                 
                 <Menu />
@@ -70,10 +85,7 @@ class News extends Component {
     }
 }
 
-const key = 'ba3db1d153d84fe385b66276373849c3';
 
-var rand = randnum(1, 20, 1);
-console.log(rand);
 
 
 

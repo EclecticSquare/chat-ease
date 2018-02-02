@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {BrowserRouter, Route, Link} from 'react-router-dom';
+import Bootstrap from 'bootstrap';
 import axios from 'axios'
 import Background from './white-thought-bubble.png'
 import Background2 from './chuck1.png'
@@ -32,22 +33,27 @@ class Chuck extends Component {
       }
 
     componentDidMount() {
-        axios({
-            method:'get',
-            url: 'https://api.chucknorris.io/jokes/random',
-            
-        }).then(({data}) => {
-            var chuckFact =[];
-            chuckFact.push(data.value)
-            console.log(chuckFact)
-            this.setState({chuck: chuckFact})
-            console.log(this.state.chuck)
-         });
-        
+        this.getJokes()
     }
 
+        updateHandler = () => {
+           this.getJokes()
+               
+        }
 
-
+        getJokes = () => {
+            axios({
+                method:'get',
+                url: 'https://api.chucknorris.io/jokes/random',
+                
+            }).then(({data}) => {
+                var chuckFact =[];
+                chuckFact.push(data.value)
+                console.log(chuckFact)
+                this.setState({chuck: chuckFact})
+                console.log(this.state.chuck)
+             });
+        }
 
 
     render() {
@@ -56,7 +62,7 @@ class Chuck extends Component {
                 <img src={ Background } className='introImage1' />
                 <img src={ Background2 } className='introImage2' />
                 <h1 className='textChuck'>{this.state.chuck}</h1>
-
+                <button type="button" className="btn btn-outline-warning" onClick={this.updateHandler}>Try Again</button>
                 <Menu />
                    
             </div>

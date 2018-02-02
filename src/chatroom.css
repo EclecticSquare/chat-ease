@@ -29,7 +29,11 @@ div.question {
     opacity: 0;  
     animation-name: leaf;
     animation-duration: 30s;
-    /* animation: infinite; */
+    animation: infinite;
+    -webkit-animation: leaf 65s infinite; /* Safari 4+ */
+    -moz-animation:    leaf 65s infinite; /* Fx 5+ */
+    -o-animation:      leaf 65s infinite; /* Opera 12+ */
+    animation:         leaf 65s infinite; /* IE 10+, Fx 29+ */
 
      
 }

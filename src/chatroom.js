@@ -91,26 +91,13 @@ class Chat extends React.Component{
             'Do you prefer traveling alone or with a group?',
             'Where would you like to travel next?',
             'What’s the best thing about traveling? How about the worst thing?'],
-            6,
+            8,
             onEach
         )
        
     }
 
-    render(){
-        
-
-       
-
-        //     function (element) {
-        //         console.log(element)
-        //         // return  
-        //         //         <div className='questDiv'>
-        //         //             <h1 className='questions'>{element}</h1><br/>
-        //         //         </div>
-                
-        //     }
-        //   )
+    render() {
 
 
 

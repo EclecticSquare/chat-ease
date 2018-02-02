@@ -1,18 +1,43 @@
 h1.textEnt {
-    font-size: 50px;
+    font-size: 40px;
     font-weight: bolder;   
-    width: 90vw;
+    width: 95vw;
     position: absolute;
     bottom: 12vh;
     left: 5vw;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: black;
-    opacity: 0.6;
   }
 
+  .cover {
+    background-color: #F2EBDC;
+    height: 29vh;
+    width: 100vw;
+    position: absolute;
+    bottom: 1px;
+    
+    opacity: 0.3
+  }
   .introImage {
    height: 100vh;
    
+  }
+
+  button.btn.btn-outline-danger {
+    width: 250px;
+    height: 50px;
+    position: absolute;
+    bottom: 3vh;
+    right: 80vh;
+    font-size: 25px;
+    border-color: black;
+    color: black;
+  }
+
+  button.btn.btn-outline-danger:hover {
+    background-color: black;
+    color: wheat;
+    border-color: wheat;
   }
 
  
