@@ -3,7 +3,18 @@ h1.textEnt {
     font-weight: bolder;   
     width: 95vw;
     position: absolute;
-    bottom: 12vh;
+    bottom: 20vh;
+    left: 5vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+  }
+
+  h1.textSum {
+    font-size: 25px;
+    font-weight: bold;   
+    width: 95vw;
+    position: absolute;
+    bottom: 15vh;
     left: 5vw;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: black;

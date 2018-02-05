@@ -132,7 +132,7 @@
   }
 
   nav.innerNav {
-      margin-left: 43vw;
+      margin-left: 38vw;
       margin-top: 20vh; 
   }
   
@@ -141,4 +141,17 @@
     opacity: 0.9;
     -webkit-transform: scale(1);
             transform: scale(1);
+  }
+
+  @media(max-width: 1177px) {
+    a.a { display: block; font-size: 30px;}
+  }
+
+  @media(max-width: 884px) {
+    a.a { display: block; font-size: 20px;}
+  }
+
+  @media(max-width: 637px) {
+    a.a { display: block; font-size: 20px;}
+    nav.innerNav { margin-left: 23vw; margin-top: 20vh;}
   }

@@ -63,7 +63,7 @@ class Entertainment extends Component {
 
             console.log(title, description)
             this.setState({entTitle: title, entSummary: description })
-            
+            this.setState({entSummary: description, entSummary: description })
          });
     }
 
@@ -76,6 +76,7 @@ class Entertainment extends Component {
                 <div className='cover'></div>
                 <div className="textBackground">
                     <h1 className='textEnt'>{this.state.entTitle}</h1>
+                    <h1 className='textSum'>{this.state.entSummary}</h1>
                 </div>
                 <button type="button" className="btn btn-outline-danger" onClick={this.updateHandler}>Try Again</button>
                 <Menu />

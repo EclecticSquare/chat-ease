@@ -20,13 +20,13 @@ class App extends Component {
         
 
             <Route exact path="/" component={Intro}/>
-            <Route path="/home" component={Intro}/> 
-            <Route path="/cats" component={Cats}/>  
-            <Route path="/chuck" component={Chuck}/> 
-            <Route path="/news" component={News}/> 
-            <Route path="/entertainment" component={Entertainment}/> 
-            <Route path="/login" component={Login}/> 
-            <Route path="/chat" component={Chat}/> 
+            <Route exact path="/home" component={Intro}/> 
+            <Route exact path="/cats" component={Cats}/>  
+            <Route exact path="/chuck" component={Chuck}/> 
+            <Route exact path="/news" component={News}/> 
+            <Route exact path="/entertainment" component={Entertainment}/> 
+            <Route exact path="/login" component={Login}/> 
+            <Route exact path="/chat" component={Chat}/> 
 
 
       </div>

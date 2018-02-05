@@ -55,7 +55,7 @@ class Cats extends Component {
     render() {
         return(
             <div className='backgroundImage'>
-                <img src={ Background } className='introImage' />
+                <img src={ Background } className='backImage' />
                 <button type="button" className="btn btn-outline-info  btn-lg btn-block">Info</button>
                 <h1 className='textCat'>{this.state.cat}</h1>
                 <button type="button" className="btn btn-outline-secondary" onClick={this.updateHandler}>Try Again</button>

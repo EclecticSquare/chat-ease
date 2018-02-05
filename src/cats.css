@@ -1,4 +1,10 @@
 
+img.backImage {
+  width: 100vw;
+  height: 100vh;
+}
+
+
 h1.textCat {
   width: 45vw;
   height: 45vh;
@@ -18,3 +24,13 @@ button.btn.btn-outline-secondary {
   font-size: 25px;
 }
  
+
+@media (max-width: 768px){
+  h1.textCat {font-size: 20px; width:70vw; left: 3vw;}
+  img.backImage {width: 135vw; height: 100vh;}
+  button.btn.btn-outline-secondary {left: 3vw;}
+}
+
+@media (max-width: 876px){
+  button.btn.btn-outline-secondary {top: 65vh; left: 5vh;}
+}

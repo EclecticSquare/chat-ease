@@ -4,6 +4,7 @@ import Image from './avatar.png'
 import Cats from './cats.js'
 import Chuck from './chuck.js'
 import News from './news.js'
+import Menu from './menu.js'
 import Entertainment from './entertainment.js'
 import './login.css';
 import Background from './candlesSparklers.jpg';
@@ -68,6 +69,7 @@ class Login extends Component {
               <Button color="secondary cancel" onClick={this.toggle}>Cancel</Button>
             </ModalFooter>
           </Modal>
+          <Menu/>
         </div>
       );
     }

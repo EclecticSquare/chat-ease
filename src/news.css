@@ -36,3 +36,27 @@ button.btn.btn-outline-primary:hover {
   color: white;
   background-color: black;
 }
+
+@media (max-width: 1555px) {
+  h1.textNews {width: 45vw; font-size: 25px;}
+  h3.textNews {width: 45vw; top: 40; font-size: 20px;}
+}
+
+@media (max-width: 927px) {
+  h1.textNews {width: 45vw; font-size: 25px;}
+  h3.textNews {width: 45vw; top: 40; font-size: 20px;}
+  button.btn.btn-outline-primary {bottom: 30vh;}
+}
+
+@media (max-width: 811px) {
+  h1.textNews {width: 75vw; font-size: 22px; top: 25vh;}
+  h3.textNews {width: 75vw; top: 40; font-size: 18px;}
+  button.btn.btn-outline-primary {bottom: 5vh;}
+}
+
+@media (max-width: 400px) {
+  h1.textNews {width: 85vw; font-size: 23px; color: lightgray;}
+  h3.textNews {width: 85vw; top: 40; font-size: 18px; top: 46vh; color: lightgray;}
+  button.btn.btn-outline-primary {bottom: 5vh;}
+  img.introImage{display: none; }
+}

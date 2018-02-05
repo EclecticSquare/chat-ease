@@ -48,6 +48,7 @@ class Chat extends React.Component{
         }
        componentDidMount(){
         const onEach = (element, index, processed, interval) => {
+            
             this.setState({icebreakers: this.state.icebreakers.concat(element)}) 
         }
 
@@ -76,7 +77,7 @@ class Chat extends React.Component{
             'What makes you nervous?',
             'What weird or useless talent do you have?',
             'Which TV show do you want your life to be like?',
-            'What do you think about reality TV? Why is it so popular?',
+            'What do you think about reality TV?',
             'What’s the strangest movie you have ever seen?',
             'What is the most overrated movie?',
             'When was the last time you went to a movie theater?',
@@ -90,7 +91,7 @@ class Chat extends React.Component{
             'What restaurant do you eat at most?',
             'Do you prefer traveling alone or with a group?',
             'Where would you like to travel next?',
-            'What’s the best thing about traveling? How about the worst thing?'],
+            'What’s the best thing about traveling?'],
             8,
             onEach
         )
@@ -105,7 +106,7 @@ class Chat extends React.Component{
             <div>
                 
                 <h1 className='display-4'>Keep the Conversation Going</h1>
-                    <div>{this.state.icebreakers.map((element, index)=> {
+                    <div className='floatingWords'>{this.state.icebreakers.map((element, index)=> {
                         return <div key={index} className='question'>{element}</div>
                     }
                     )}</div>

@@ -1,4 +1,4 @@
-body {
+html {
     background: url('./gray-brick.jpg') no-repeat;
     background-size: cover;
 }
@@ -27,13 +27,10 @@ div.question {
     margin-left: 20px;
     position: absolute;
     opacity: 0;  
-    animation-name: leaf;
-    animation-duration: 30s;
-    animation: infinite;
-    -webkit-animation: leaf 65s infinite; /* Safari 4+ */
-    -moz-animation:    leaf 65s infinite; /* Fx 5+ */
-    -o-animation:      leaf 65s infinite; /* Opera 12+ */
-    animation:         leaf 65s infinite; /* IE 10+, Fx 29+ */
+    -webkit-animation: leaf 304s infinite; /* Safari 4+ */
+    -moz-animation:    leaf 304s infinite; /* Fx 5+ */
+    -o-animation:      leaf 304s infinite; /* Opera 12+ */
+    animation:         leaf 304s infinite; /* IE 10+, Fx 29+ */
 
      
 }
@@ -77,7 +74,15 @@ input[type="text"]
 
 @keyframes leaf {
       0%   {color: lightgray; top: 75px; opacity: 1;}
-    25%  {color: lightslategray; top: 250px; font-size: 40px; }
-    50%  {color: white; font-size: 30px;}
-    100% {color: lightslategray; top: 900px; opacity: 0;}
+      8%   {color: lightslategray; top: 250px; font-size: 40px; }
+      16%   {color: white; font-size: 30px;}
+      22%   {color: lightslategray; top: 900px; opacity: 0;} 
+    100%    {top: 1200px; opacity: 0;} 
+}
+
+@media (max-width:740px) {
+    h1.display-4 {display: none;}
+    .floatingWords{display: none;}
+    .card {width: 100vw;left: 0vw;}
+    div.container {padding:0;}
 }

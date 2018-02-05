@@ -23,7 +23,7 @@ class Menu extends Component {
                         <Link to='/cats' className='a'>Cats</Link>
                         <Link to='/chuck' className='a'>Chuck Norris</Link>
                         <Link to='/entertainment' className='a'>Entertainment</Link>
-                        <Link to='/chat' className='a'>Continue Chatting</Link>   
+                        <Link to='/login' className='a'>Continue Chatting</Link>   
                             
                         </nav>
                     </div>
