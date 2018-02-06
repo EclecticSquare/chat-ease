@@ -1,14 +1,7 @@
 import React, { Component } from 'react';
-import Bootstrap, { DropdownButton } from 'react-bootstrap';
 import Image from './images/avatar.png'
-import Cats from './cats.js'
-import Chuck from './chuck.js'
-import News from './news.js'
 import Menu from './menu.js'
-import Entertainment from './entertainment.js'
 import './login.css';
-import Background from './candlesSparklers.jpg';
-import {Route, Link} from 'react-router-dom';
 import Google from './googleLogin'
 
 // import GoogleSignIn from "react-google-signin";
@@ -47,7 +40,7 @@ class Login extends Component {
           <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
             <ModalHeader toggle={this.toggle}>Login or Create An Account</ModalHeader>
             <ModalBody>
-                <img src={Image}/>
+                <img src={Image} alt='avatars'/>
                 <br/>
                 <Form>
                   <FormGroup>

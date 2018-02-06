@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
-import {BrowserRouter, Route, Link} from 'react-router-dom';
-import Bootstrap from 'bootstrap';
 import axios from 'axios'
 import Background from './images/white-thought-bubble.png'
 import Background2 from './images/chuck1.png'
-import { Nav, NavItem, Dropdown, DropdownItem, DropdownToggle, DropdownMenu, NavLink } from 'reactstrap';
 import './chuck.css'
 import Menu from './menu.js'
 
@@ -59,8 +56,8 @@ class Chuck extends Component {
     render() {
         return(
             <div className='backgroundImage'>
-                <img src={ Background } className='introImage1' />
-                <img src={ Background2 } className='introImage2' />
+                <img src={ Background } className='introImage1' alt='chat bubble'/>
+                <img src={ Background2 } className='introImage2' alt='Chuck Norris'/>
                 <h1 className='textChuck'>{this.state.chuck}</h1>
                 <button type="button" className="btn btn-outline-warning" onClick={this.updateHandler}>Try Again</button>
                 <Menu />

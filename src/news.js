@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
-import Bootstrap from 'react-bootstrap';
-import {BrowserRouter, Route, Link} from 'react-router-dom';
 import axios from 'axios'
 import Background from './images/news.jpg'
 import randnum from 'random-number-between'
-import { Nav, NavItem, Dropdown, DropdownItem, DropdownToggle, DropdownMenu, NavLink } from 'reactstrap';
 import './css/news.css'
 import Menu from './menu.js'
 
@@ -69,7 +66,7 @@ class News extends Component {
     render() {
         return(
             <div className='backgroundImage'>
-                <img src={ Background } className='introImage' />
+                <img src={ Background } className='introImage' alt="tabloid Magazines" />
                 
                 <h1 className='textNews'>{this.state.newsTitle}</h1>
                     <h3 className='textNews'>{this.state.newsSummary}</h3>

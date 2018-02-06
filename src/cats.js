@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
-import Bootstrap from 'bootstrap';
-import {BrowserRouter, Route, Link} from 'react-router-dom';
 import axios from 'axios'
 import Background from './images/catOnBlack.jpg'
-import { Nav, NavItem, Dropdown, DropdownItem, DropdownToggle, DropdownMenu, NavLink } from 'reactstrap';
 import './css/cats.css'
 import Menu from './menu.js'
 
@@ -55,7 +52,7 @@ class Cats extends Component {
     render() {
         return(
             <div className='backgroundImage'>
-                <img src={ Background } className='backImage' />
+                <img src={ Background } className='backImage' alt='Cat' />
                 <button type="button" className="btn btn-outline-info  btn-lg btn-block">Info</button>
                 <h1 className='textCat'>{this.state.cat}</h1>
                 <button type="button" className="btn btn-outline-secondary" onClick={this.updateHandler}>Try Again</button>

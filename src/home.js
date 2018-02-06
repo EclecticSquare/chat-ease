@@ -1,18 +1,9 @@
 import React, { Component } from 'react';
-import Bootstrap, { DropdownButton } from 'react-bootstrap';
-import Icon from 'react-fontawesome'
-import Cats from './cats.js'
-import Chuck from './chuck.js'
-import News from './news.js'
-import Login from './login.js'
 import Directions from './directions.js'
-import Entertainment from './entertainment.js'
 import './home.css';
 // import Background from '.images/candlesSparklers.jpg';
-import {Route, Link} from 'react-router-dom';
-import {Button, 
-        ButtonGroup,
-        ButtonDropdown,
+import {Link} from 'react-router-dom';
+import {ButtonDropdown,
         DropdownToggle,
         DropdownItem,
         DropdownMenu

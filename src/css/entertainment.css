@@ -26,7 +26,6 @@ h1.textEnt {
     width: 100vw;
     position: absolute;
     bottom: 1px;
-    
     opacity: 0.3
   }
   .introImage {
@@ -51,4 +50,15 @@ h1.textEnt {
     border-color: wheat;
   }
 
+  @media (max-width: 915px) {
+    button.btn.btn-outline-danger{left: 35vw;}
+    .cover{height: 75vh;}
+    .introImage{width: 175vw}
+  }
  
+  @media (max-width: 786px) {
+    button.btn.btn-outline-danger{left: 20vw;}
+    .cover{height: 100vh; opacity: 0.5}
+    .introImage{width: 195vw}
+    h1.textEnt {bottom: 30vh;}
+  }

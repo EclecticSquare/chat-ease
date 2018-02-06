@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
-import Bootstrap from 'react-bootstrap';
-import {BrowserRouter, Route, Link} from 'react-router-dom';
 import axios from 'axios'
 import Background from './tabloid.jpg'
 import randnum from 'random-number-between'
-import { Nav, NavItem, Dropdown, DropdownItem, DropdownToggle, DropdownMenu, NavLink } from 'reactstrap';
 import './css/entertainment.css'
 import Menu from './menu.js'
 
@@ -62,8 +59,8 @@ class Entertainment extends Component {
             
 
             console.log(title, description)
-            this.setState({entTitle: title, entSummary: description })
-            this.setState({entSummary: description, entSummary: description })
+            this.setState({entTitle: title})
+            this.setState({entSummary: description })
          });
     }
 
@@ -72,7 +69,7 @@ class Entertainment extends Component {
     render() {
         return(
             <div className='backgroundImage'>
-                <img src={ Background } className='introImage' />
+                <img src={ Background } className='introImage' alt='' />
                 <div className='cover'></div>
                 <div className="textBackground">
                     <h1 className='textEnt'>{this.state.entTitle}</h1>

@@ -1,7 +1,6 @@
 
 import React, { Component } from 'react';
 import GoogleLogin from 'react-google-login';
-import { Link } from 'react-router-dom';
 import {withRouter} from "react-router-dom";
 
 

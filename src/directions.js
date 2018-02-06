@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 import './directions.css'
-import Background1 from './step1.png'
-import Background2 from './step2.png'
-import Background3 from './step3.png'
 
  
 
