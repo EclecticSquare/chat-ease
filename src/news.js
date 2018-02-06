@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import Bootstrap from 'react-bootstrap';
 import {BrowserRouter, Route, Link} from 'react-router-dom';
 import axios from 'axios'
-import Background from './news.jpg'
+import Background from './images/news.jpg'
 import randnum from 'random-number-between'
 import { Nav, NavItem, Dropdown, DropdownItem, DropdownToggle, DropdownMenu, NavLink } from 'reactstrap';
-import './news.css'
+import './css/news.css'
 import Menu from './menu.js'
 
 

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Bootstrap, { DropdownButton } from 'react-bootstrap';
-import Image from './avatar.png'
+import Image from './images/avatar.png'
 import Cats from './cats.js'
 import Chuck from './chuck.js'
 import News from './news.js'

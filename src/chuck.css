@@ -9,7 +9,7 @@
 }
 
 div.backgroundImage {
-  background: url('westernBackground.jpg');
+  background: url('images/westernBackground.jpg');
   background-repeat: none;
   background-size: cover;
 }

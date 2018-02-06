@@ -5,7 +5,7 @@ import axios from 'axios'
 import Background from './tabloid.jpg'
 import randnum from 'random-number-between'
 import { Nav, NavItem, Dropdown, DropdownItem, DropdownToggle, DropdownMenu, NavLink } from 'reactstrap';
-import './entertainment.css'
+import './css/entertainment.css'
 import Menu from './menu.js'
 
 

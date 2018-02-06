@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import Bootstrap from 'bootstrap';
 import {BrowserRouter, Route, Link} from 'react-router-dom';
 import axios from 'axios'
-import Background from './catOnBlack.jpg'
+import Background from './images/catOnBlack.jpg'
 import { Nav, NavItem, Dropdown, DropdownItem, DropdownToggle, DropdownMenu, NavLink } from 'reactstrap';
-import './cats.css'
+import './css/cats.css'
 import Menu from './menu.js'
 
 

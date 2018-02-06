@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import {BrowserRouter, Route, Link} from 'react-router-dom';
 import Bootstrap from 'bootstrap';
 import axios from 'axios'
-import Background from './white-thought-bubble.png'
-import Background2 from './chuck1.png'
+import Background from './images/white-thought-bubble.png'
+import Background2 from './images/chuck1.png'
 import { Nav, NavItem, Dropdown, DropdownItem, DropdownToggle, DropdownMenu, NavLink } from 'reactstrap';
 import './chuck.css'
 import Menu from './menu.js'

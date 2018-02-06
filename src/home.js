@@ -8,7 +8,7 @@ import Login from './login.js'
 import Directions from './directions.js'
 import Entertainment from './entertainment.js'
 import './home.css';
-import Background from './candlesSparklers.jpg';
+// import Background from '.images/candlesSparklers.jpg';
 import {Route, Link} from 'react-router-dom';
 import {Button, 
         ButtonGroup,
