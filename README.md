@@ -2,7 +2,7 @@
 
 
 
-Are you dreading an upcoming party or event?  Do you shudder at the thought of joining a conversation already in progress?  If so, then Chat-Ease is for you.  Ease your way into any conversation with a simple one liner that can grab the attention of those around you.  Press a topic and get a phrase/idea to introduce to the conversation or start whole new one.
+<p style='font-size: 15px'>Are you dreading an upcoming party or event?  Do you shudder at the thought of joining a conversation already in progress?  If so, then Chat-Ease is for you.  Ease your way into any conversation with a simple one liner that can grab the attention of those around you.  Press a topic and get a phrase/idea to introduce to the conversation or start whole new one.</p>
 
 Languages/Technologies Used: React, Html, CSS, BootStrap,Matrialize,  Axios
     React:  Used to create a "one-page" application.  Allows to flip from page to page quickly.
