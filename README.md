@@ -1,4 +1,4 @@
-<h1 style='text-align: center'>Chat-Ease<h1>
+<h1 style='text-align: center; color:purple'>Chat-Ease<h1>
 <h3 style='text-align:center'>Make chatting a breeze with ChatEase</h3>
 <p style='font-size: 15px'>Are you dreading an upcoming party or event?  Do you shudder at the thought of joining a conversation already in progress?  If so, then Chat-Ease is for you.  Ease your way into any conversation with a simple one liner that can grab the attention of those around you.  Press a topic and get a phrase/idea to introduce to the conversation or start whole new one.</p>
 
