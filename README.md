@@ -37,6 +37,13 @@
 
 <h3>~Challenges and Solutions~</h3>
 The possibilities of for this application were really exciting but getting to my finished product came with several challlenges.  Here are a few I encountered and how I overcame them.
+<ol>
+    <li>Understanding how Bootstrap worked with React.</li>
+    <li>Getting Socket.io interacting properly with React  <p>Socket.io was not playing nice with React.</p></li>
+    <li>Timing of falling words on chat page</li>
+</ol>
+
+
 
 
 
