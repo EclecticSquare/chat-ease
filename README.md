@@ -22,9 +22,23 @@
 
 
 <h3>~Reason for Creating~</h3>
-<p>Chat-Ease is a final project for Digital Crafts.  It was built using the front and back end skills I acquired  </p>
+<p>Chat-Ease is a final project for DigitalCrafts.  It was built using the front and back end skills I acquired during my part-time intensive coding classes and built in three weeks.   </p>
+
+<h3>Languages Used</h3>
+    <ul>
+    <li>React</li>
+     <li>JSX/HTML</li>
+     <li>CSS</li>
+     <li>Bootstrap</li>
+     <li>Materialize</li>
+     <li>Axios</li>
+    </ul>
+
 
 <h3>~Challenges and Solutions~</h3>
+The possibilities of for this application were really exciting but getting to my finished product came with several challlenges.  Here are a few I encountered and how I overcame them.
+
+
 
 <h3>~MVP~</h3>
 
@@ -36,8 +50,4 @@
 <h3>~Code examples~</h3>
 
 
-Languages/Technologies Used: React, Html, CSS, BootStrap,Matrialize,  Axios
-    React:  Used to create a "one-page" application.  Allows to flip from page to page quickly.
-    Html: Used to build the structure of the application within React.
-    CSS, BootStrap, Materialize:  Used to style the application.  Making it moe attractive and interactive.
-    Axios:  Used to make API calls.
+
