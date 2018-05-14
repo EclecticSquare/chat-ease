@@ -42,9 +42,10 @@ The possibilities of for this application were really exciting but getting to my
 <ol>
     <li>Understanding how Bootstrap worked with React.  <p>While Bootstrap is generally easy to use, I had a bit of a learning curve while using it in React.  Buttons wouldn't show up, navbars didn't work and so on.  I'd make a  change in another part of the page and it would change the Bootstrap in a different part of the page.  Eventually, I discovered React-Strap, a npm install that allowed me to use the Bootstrap by importing specific components.  Using it combined with regular Bootstrap, I was able to get back on track. </p></li>
      
-   <li>Getting Socket.io interacting properly with React  <p>We had a few options of languages to use in our project.  One that I chose was Socket.io.  At a first glance, it seemed simple and straightforward.  However, it did not play well  with React in the beggining.  I could not get the back and front end to talk to each other in order to make the chatroom work properly.  After much frustration in trying to put Socket.io directly into what I had already built, I decided see if I could get it working separately on hits own.  I was able to get it working separately.  I then joined the working code with my application code.</p>
+   <li>Getting Socket.io interacting with React  <p>We had a few options of languages to use in our project.  One that I chose was Socket.io.  At a first glance, it seemed simple and straightforward.  However, it did not play well  with React in the beggining.  I could not get the back and front end to talk to each other in order to make the chatroom work properly.  After much frustration in trying to put Socket.io directly into what I had already built, I decided see if I could get it working separately on hits own.  I was able to get it working separately.  I then joined the working code with my application code.</p>
     </li>
-    <li>Timing of falling words on chat page</li>
+    <li>Timing of falling words on chat page <p>Timing of scrolling objects takes a skilled nuance with math that I am still working to master.  In this case, my lines would start the second iteration and they would start overlapping.  After doing much reading and lots of googling, I was able to get the timing almost perfect.  It took mulitple attempts at getting the numbers right for the amount of elements I had in my array.  I also had to work with </p>
+    </li>
     <li>Using Google Sign-in </li>
 </ol>
 
