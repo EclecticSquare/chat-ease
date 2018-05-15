@@ -55,7 +55,16 @@ The possibilities of for this application were really exciting but getting to my
 
 
 <h3>~MVP (Minimal Viable Produce)~</h3>
-<p></p>
+<ul> My first MVP was basic.  The class had only recently been introduce to React and I wanted to work with it to see what it could do.  My goals for the MVP included:
+    <li>Captivating background images</li>
+    <li>Using APIs to pull in bits of information for each topic.  Using at least 2 different APIs.</li>
+    <li>An unobtrusive navigation bar.</li>
+    <li>Easy navigation from one page to the next</li>
+    <li>Slideshow explaining how to use the application</li>
+    
+</ul>
+
+
 <h3>~Our Stretch Goals~</h3>
 
 <h3>~Screenshots~</h3>
