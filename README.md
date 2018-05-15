@@ -87,6 +87,6 @@ The possibilities of for this application were really exciting but getting to my
 
 <h3>~Code examples~</h3>
 
-<script src="http://gist-it.appspot.com/http://github.com/$file"></script>
+<iframe src="https://github.com/EclecticSquare/chat-ease/blob/master/src/menu.js"></iframe>
 
 
