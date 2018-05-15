@@ -80,6 +80,8 @@ The possibilities of for this application were really exciting but getting to my
 
 <h3>~Github Link~</h3>
 
+<a href='https://github.com/EclecticSquare/chat-ease'>Visit ChatEase on Github</a>
+
 
 
 
