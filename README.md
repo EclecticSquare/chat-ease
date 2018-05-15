@@ -67,9 +67,22 @@ The possibilities of for this application were really exciting but getting to my
 
 <h3>~Our Stretch Goals~</h3>
 
+<ul> Here is what my second level IVP (Intermediate Viable Product) featured:
+    <li>Google Login</li>
+    <li>Chat Room</li>
+    <li>A scrolling list of statements to use in the chat room</li>
+    <li>Hamburger navbar</li>
+</ul>
+
 <h3>~Screenshots~</h3>
 
+<p>Coming soon...</p>
+
 <h3>~Github Link~</h3>
+
+
+
+
 <h3>~Code examples~</h3>
 
 
