@@ -87,5 +87,6 @@ The possibilities of for this application were really exciting but getting to my
 
 <h3>~Code examples~</h3>
 
+<script src="http://gist-it.appspot.com/http://github.com/$file"></script>
 
 
