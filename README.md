@@ -46,7 +46,8 @@ The possibilities of for this application were really exciting but getting to my
     </li>
     <li>Timing of falling words on chat page <p>Timing of scrolling objects takes a skilled nuance with math that I am still working to master.  In this case, my lines would start the second iteration and they would start overlapping.  After doing much reading and lots of googling, I was able to get the timing almost perfect.  It took mulitple attempts at getting the numbers right for the amount of elements I had in my array.  I also had to work with </p>
     </li>
-    <li>Using Google Sign-in </li>
+    <li>Using Google Sign-in <p>It was interesting reading through the instructions on using Google Sign in.   After several attempts to get the button to work their way, I ended up using a npm install and was able to make it work properly with a bit of </p> </li>
+    
 </ol>
 
 
